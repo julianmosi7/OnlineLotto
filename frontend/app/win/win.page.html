@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gewinne</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Gewinne</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-card>
+      <ion-list>
+        <div *ngFor="let w of wins; let i = index">
+          <ion-item>
+            <ion-label>{{i+3}}er:</ion-label>
+            <ion-label>{{w}}</ion-label>
+          </ion-item>
+        </div>
+        <ion-item>
+          <ion-label>Gesamtgewinn:</ion-label>
+          <ion-label>{{win.total}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+    <ion-button (click)="load()">Load Wins</ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <navbar></navbar>
+  </ion-toolbar>
+</ion-footer>

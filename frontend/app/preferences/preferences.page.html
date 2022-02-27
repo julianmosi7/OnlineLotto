@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Einstellungen</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Einstellungen</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-item>
+      <ion-label>Benutzername:</ion-label>
+      <ion-input [(ngModel)]="userName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>UserId:</ion-label>
+      <ion-input type="number" [(ngModel)]="userId"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Passwort:</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="login()">Anmelden</ion-button>
+    <ion-button (click)="logout()">Abmelden</ion-button>
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <navbar></navbar>
+  </ion-toolbar>
+</ion-footer>

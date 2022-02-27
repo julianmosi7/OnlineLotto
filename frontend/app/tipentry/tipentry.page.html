@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tippeingabe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tippeingabe</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-card>
+      <ion-list>
+        <ion-item *ngFor="let entry of entry_list; let i = index">
+          <ion-label>Zahl {{i+1}}: </ion-label>
+          <ion-input [(ngModel)]="entry.value"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+    <ion-button expand="full" (click)="sendTip()">Sende Tipp</ion-button>
+    <ion-button expand="full" (click)="generateRandomTips()">Zufallstipps erzeugen</ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <navbar></navbar>
+  </ion-toolbar>
+</ion-footer>

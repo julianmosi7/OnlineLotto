@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>draws</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Ziehungen</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>Id</ion-col>
+        <ion-col>Ziehung</ion-col>
+        <ion-col>Z1</ion-col>
+        <ion-col>Z2</ion-col>
+        <ion-col>Z3</ion-col>
+        <ion-col>Z4</ion-col>
+        <ion-col>Z5</ion-col>
+        <ion-col>Z6</ion-col>
+        <ion-col>3er</ion-col>
+        <ion-col>4er</ion-col>
+        <ion-col>5er</ion-col>
+        <ion-col>6er</ion-col>
+      </ion-row>
+
+      <ion-row *ngFor="let draw of draws">
+        <ion-col>{{draw.round.roundId}}</ion-col>
+        <ion-col>{{draw.round.finished}}</ion-col>
+        <ion-col [style.background-color]="'lightblue'">{{draw.round.z1}}</ion-col>
+        <ion-col [style.background-color]="'lightblue'">{{draw.round.z2}}</ion-col>
+        <ion-col [style.background-color]="'lightblue'">{{draw.round.z3}}</ion-col>
+        <ion-col [style.background-color]="'lightblue'">{{draw.round.z4}}</ion-col>
+        <ion-col [style.background-color]="'lightblue'">{{draw.round.z5}}</ion-col>
+        <ion-col [style.background-color]="'lightblue'">{{draw.round.z6}}</ion-col>
+        <ion-col [style.background-color]="draw.win.nr3 > 0 ? 'lightgreen' : ''">{{draw.win.nr3}}</ion-col>
+        <ion-col [style.background-color]="draw.win.nr3 > 0 ? 'lightgreen' : ''">{{draw.win.nr4}}</ion-col>
+        <ion-col [style.background-color]="draw.win.nr3 > 0 ? 'lightgreen' : ''">{{draw.win.nr5}}</ion-col>
+        <ion-col [style.background-color]="draw.win.nr3 > 0 ? 'lightgreen' : ''">{{draw.win.nr6}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <navbar></navbar>
+  </ion-toolbar>
+</ion-footer>

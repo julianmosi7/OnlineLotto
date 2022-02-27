@@ -1,0 +1,30 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="navigateTo('rank')">
+      <ion-icon name="list"></ion-icon>
+      <ion-label>Rang</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="navigateTo('tipentry')">
+      <ion-icon name="pencil"></ion-icon>
+      <ion-label>Tipp</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="navigateTo('win')">
+      <ion-icon name="trophy"></ion-icon>
+      <ion-label>Gewinn</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="navigateTo('draws')">
+      <ion-icon name="stats-chart"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="navigateTo('preferences')">
+      <ion-icon name="cog"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="navigateTo('home')">
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
